@@ -34,29 +34,39 @@ A continuación, se detallan las métricas utilizadas, junto con su cálculo y l
 
 ## <br>⚙️ Desarrollo del proyecto
 ### Descripción de la Fuente de Datos
-Es un archivo CSV de 16 columnas de información, contiene 5000 registros sintéticos de varias transacciones financieras en múltiples categorías, lo que proporciona una rica fuente para el análisis de tendencias y comportamientos de pago digital.
+Es un archivo CSV de 16 columnas de información. Contiene 5000 registros sintéticos de varias transacciones financieras en múltiples categorías, lo que proporciona una rica fuente para el análisis de tendencias y comportamientos de pago digital.
 
-A continuación, se describen las principales entidades:
-- **idx:** Índice único para cada registro
-- **transaction_id:** Identificador único para cada transacción (UUID)
-- **user_id:** Identificador único para cada usuario
-- **transaction_date:** Fecha y hora de la transacción
-- **product_category:** Categoría del producto o servicio
-- **product_name:** Nombre específico del producto o servicio
-- **merchant_name:** Nombre del comerciante o proveedor de servicios
-- **product_amount:** Monto de la transacción en moneda local
-- **transaction_fee:** Tarifa cobrada por la transacción
-- **cashback:** Monto del reembolso recibido por la transacción
-- **loyalty_points:** Puntos de fidelidad obtenidos por la transacción
-- **payment_method:** Método utilizado para el pago
-- **transaction_status:** Estado de la transacción (Successful, Failed, Pending)
-- **merchant_id:** Identificador único para cada comerciante
-- **device_type:** Tipo de dispositivo utilizado para la transacción
-- **location:** Categoría de ubicación de la transacción
+----
+### Data Flow
+A continuación se detalla el flujo de datos utilizado para la Extracción, Transformación y Carga de Datos (ETL) en el proyecto
 
 
+Se consideraron los siguientes aspectos para la manipulación de la base datos:
 
+0. Las consultas están diseñadas para ejecutarse en **Google Cloud Platform > BigQuery**, considerando la sintaxis específica de este entorno.
+1. Para la creación de la **Capa Bronce**, se sube el archivo CSV como la tabla `dataset` al conjunto de datos `digital_wallet_transactions` dentro del proyecto denominado `bronze_cape`.
+2. Para la creación de la **Capa Silver**, donde se encuentra la información ya transformada, se crea la tabla `dataset` en el conjunto de datos `transformdata` dentro del proyecto denominado `silver_cape`.
 
+Para crear la tabla en la Capa Silver, donde solo se seleccionarán 12 columnas que nos interesan para nuestro estudio, se deben ejecutar la siguiente query:
+
+```
+CREATE OR REPLACE TABLE `silver-cape.transformdata.dataset` AS
+SELECT
+  data.transaction_id,
+  data.user_id,
+  data.transaction_date,
+  data.product_category,
+  data.product_amount,
+  data.transaction_fee,
+  data.cashback,
+  data.loyalty_points,
+  data.payment_method,
+  data.transaction_status,
+  data.device_type,
+  data.location
+FROM `bronze-cape.digital_wallet_transactions.dataset` AS data
+```
+Luego, ya podremos realizar la conexión de datos desde Power BI para transformar la información
 
 
 
