@@ -66,7 +66,14 @@ SELECT
   data.location
 FROM `bronze-cape.digital_wallet_transactions.dataset` AS data
 ```
-Luego, ya podremos realizar la conexión de datos desde Power BI para transformar la información
+Luego, ya podremos realizar la conexión de datos desde **Power BI > Bigquery** para transformar la información
 
 
+## <br>💡 DATA MART 
+En el contexto de este proyecto, el Data Mart se diseñó específicamente para centralizar y organizar la información clave relacionada con las transacciones de una billetera digital, facilitando el análisis de datos mediante la segmentación y almacenamiento eficiente de los parámetros más relevantes. 
 
+Previamente se deben limpiar los datos para evitar errores durante el análisis. Para el caso, los datos utilizados esta pre-procesados y limpios, de tal manera que no hay NULLs ni transacciones repetidas.
+
+Luego para el modelado y normalización de datos, se crea un **Data Mart con 6 tablas de dimensiones**. Lo que permite agrupar los datos por categorías como transacciones, métodos de pago, locaciones, dispositivos, categorías de productos y fechas.
+
+![Arquitectura data mart](/images/data_mart.JPG)
