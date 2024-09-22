@@ -69,7 +69,7 @@ FROM `bronze-cape.digital_wallet_transactions.dataset` AS data
 Luego, ya podremos realizar la conexión de datos desde **Power BI > Bigquery** para transformar la información
 
 
-## <br>💡 DATA MART 
+## <br>💡 Data Mart
 En el contexto de este proyecto, el Data Mart se diseñó específicamente para centralizar y organizar la información clave relacionada con las transacciones de una billetera digital, facilitando el análisis de datos mediante la segmentación y almacenamiento eficiente de los parámetros más relevantes. 
 
 Previamente se deben limpiar los datos para evitar errores durante el análisis. Para el caso, los datos utilizados esta pre-procesados y limpios, de tal manera que no hay NULLs ni transacciones repetidas.
@@ -152,3 +152,21 @@ transaction_abandonment_rate = DIVIDE(
     COUNTROWS(fact_transactions)
 )
 ```
+## <br>💡 Análisis de Datos
+El análisis de datos se llevó a cabo mediante un enfoque descriptivo y comparativo. Se desarrolló un reporte con 1 portada y 5 dashboards. En cada página se muestran aspectos representativos de las transacciones y visualizaciones puntuales para responder a cada una de las hipótesis de negocios y obtener insights relevantes.
+
+Durante el diseño de todos los dashboards, se consideraron aspectos de UX y Data Storytelling para que la interpretación de las visualizaciones sea lo más amigable posible.
+
+![Dashboard HOME](/images/dashboard_0.jpg)
+
+![Dashboard General](/images/dashboard_1.jpg)
+
+![Dashboard Puntos_Lealtad](/images/dashboard_2.jpg)
+
+![Dashboard Tasa_Conversion](/images/dashboard_3.jpg)
+
+![Dashboard Cashback](/images/dashboard_4.jpg)
+
+![Dashboard Ganancias](/images/dashboard_5.jpg)
+
+
