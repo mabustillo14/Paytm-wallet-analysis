@@ -4,7 +4,7 @@ Este proyecto tiene como objetivo analizar las transacciones realizadas en una b
 ### Fuente de Datos
 Se utiliza un conjunto de datos obtenida de [Kaggle](https://www.kaggle.com/datasets/harunrai/digital-wallet-transactions) que simula las transacciones de una plataforma de billetera digital similar a servicios populares como PayTm en India o Khalti en Nepal.
 
-## <br>🔧 Enfoque Metodológico 
+## <br>💡 Enfoque Metodológico 
 Se diseñaron dashboards interactivos en Power BI para visualizar KPIs y validar hipótesis relacionadas con cashback, lealtad, dispositivos y categorías de productos.
 
 ### Objetivos del Caso de Negocios:
@@ -18,3 +18,12 @@ Se diseñaron dashboards interactivos en Power BI para visualizar KPIs y validar
 2. Los usuarios que acumulan más puntos de lealtad son más propensos a realizar transacciones de mayor monto.
 3. Los usuarios que usan dispositivos móviles tienen una tasa de conversión más baja que aquellos que usan computadoras
 4. Las categorías de productos con mayor cashback tienen un monto promedio por transacción más alto
+
+### Plan de Métricas
+Para las pruebas de hipótesis de negocio, se plantean 13 KPIs que permitan examinar el comportamiento de los usuarios entre las distintas transacciones.
+
+A continuación, se detallan las métricas utilizadas, junto con su cálculo y los puntos de vista desde los cuales se pueden analizar.
+
+![Plan de métricas](/images/plan_metricas.JPG)
+
+Se puede ver con más detalles en la documentación del [Plan de Métricas](/docs/plan_metricas.pdf)
