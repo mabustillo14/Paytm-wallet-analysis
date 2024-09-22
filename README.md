@@ -74,6 +74,81 @@ En el contexto de este proyecto, el Data Mart se diseñó específicamente para 
 
 Previamente se deben limpiar los datos para evitar errores durante el análisis. Para el caso, los datos utilizados esta pre-procesados y limpios, de tal manera que no hay NULLs ni transacciones repetidas.
 
-Luego para el modelado y normalización de datos, se crea un **Data Mart con 6 tablas de dimensiones**. Lo que permite agrupar los datos por categorías como transacciones, métodos de pago, locaciones, dispositivos, categorías de productos y fechas.
+Luego para el modelado y normalización de datos, se crea un **Data Mart con 6 tablas de dimensiones**. Lo que permite agrupar los datos por categorías como transacciones (`fact_transactions`), métodos de pago (`dim_payment_method`), locaciones (`dim_location`), dispositivos (`dim_device`), categorías de productos (`dim_produts`) y fechas (`dim_calendar`).
 
 ![Arquitectura data mart](/images/data_mart.JPG)
+
+Luego desde Power Query se unifican las consultas para obtener las relaciones entre cada tabla.
+
+----
+### Métricas de Rendimiento
+Para este proyecto, se utilizaron medidas DAX para calcular los KPIs que se describen en el plan de métricas. A continuación, se detallan los DAX para la creación de estas métricas en la tabla `Medidas`.
+
+- Monto Total de Transacciones
+```
+total_number_transactions = COUNT(fact_transactions[transaction_id])
+```
+- Monto Promedio por Transacción
+```
+$_avg_amount_transaction = Medidas[$_total_transaction_amount] / Medidas[total_number_transactions]
+```
+- Ganancias Totales
+```
+$_total_transaction_fee = SUM(fact_transactions[transaction_fee])
+```
+- Margen de Ganancia
+```
+fee_rate_total_sales = [$_total_transaction_fee] / [$_total_transaction_amount]
+```
+- Cashback otorgado
+```
+$_total_cashback_amount = SUM(fact_transactions[cashback]) 
+```
+- Tasa de Cashback sobre Ventas Totales
+```
+cashback_rate_total_sales = [$_total_cashback_amount] / [$_total_transaction_amount]
+```
+- Número de Usuarios Activos
+```
+total_active_users = DISTINCTCOUNT(fact_transactions[user_id])
+```
+- Frecuencia de Transacciones por Usuario
+```
+transaction_frequency_per_user = [total_number_transactions] / [total_active_users]
+```
+- Total de Puntos de Lealtad
+```
+total_loyalty_points = SUM(fact_transactions[loyalty_points])
+```
+- Tasa de Acumulación de Puntos de Lealtad
+```
+loyalty_points_accumulation_rate = [total_loyalty_points] / [total_number_transactions]
+```
+- Número Total de Transacciones
+```
+total_number_transactions = COUNT(fact_transactions[transaction_id])
+```
+- Tasa de Conversión
+```
+conversion_rate = DIVIDE(
+    COUNTROWS(
+        FILTER(
+            fact_transactions, 
+            fact_transactions[transaction_status] = "Successful"
+        )
+    ),
+    COUNTROWS(fact_transactions)
+)
+```
+- Tasa de Abandono de Transacciones
+```
+transaction_abandonment_rate = DIVIDE(
+    COUNTROWS(
+        FILTER(
+            fact_transactions, 
+            fact_transactions[transaction_status] = "Failed" || fact_transactions[transaction_status] = "Pending"
+        )
+    ),
+    COUNTROWS(fact_transactions)
+)
+```
