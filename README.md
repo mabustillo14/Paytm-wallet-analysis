@@ -1,4 +1,4 @@
-## <br>💰 Análisis de Transacciones en una Wallet Digital
+## 💰 Análisis de Transacciones en una Wallet Digital
 Este proyecto tiene como objetivo analizar las transacciones realizadas en una billetera digital, utilizando diferentes métricas clave (KPIs) para obtener insights sobre el comportamiento de los usuarios, las transacciones y el rendimiento del sistema. 
 
 ### Caso de Estudio
@@ -36,10 +36,13 @@ A continuación, se detallan las métricas utilizadas, junto con su cálculo y l
 ### Descripción de la Fuente de Datos
 Es un archivo CSV de 16 columnas de información. Contiene 5000 registros sintéticos de varias transacciones financieras en múltiples categorías, lo que proporciona una rica fuente para el análisis de tendencias y comportamientos de pago digital.
 
+![Bronze Dataset](/images/dataset_transactions.JPG)
+
 ----
 ### Data Flow
 A continuación se detalla el flujo de datos utilizado para la Extracción, Transformación y Carga de Datos (ETL) en el proyecto
 
+![Data Flow](/images/data_flow.png)
 
 Se consideraron los siguientes aspectos para la manipulación de la base datos:
 
@@ -66,6 +69,8 @@ SELECT
   data.location
 FROM `bronze-cape.digital_wallet_transactions.dataset` AS data
 ```
+![Silver Dataset](/images/dataset_transformdata.JPG)
+
 Luego, ya podremos realizar la conexión de datos desde **Power BI > Bigquery** para transformar la información
 
 
