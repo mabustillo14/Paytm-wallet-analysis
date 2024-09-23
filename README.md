@@ -17,10 +17,10 @@ Se diseñaron dashboards interactivos en Power BI para visualizar KPIs y validar
 ----
 
 ### Hipótesis de Negocio
-1. Los usuarios que reciben más cashback tienden a realizar más transacciones.
-2. Los usuarios que acumulan más puntos de lealtad son más propensos a realizar transacciones de mayor monto.
-3. Los meses con mayores tasas de conversión en general se correlacionan con un aumento en el uso de dispositivos móviles, indicando que la optimización para estos dispositivos es fundamental para maximizar las transacciones.
-4. Las categorías de productos con mayor cashback tienen un ticket promedio más alto
+1. Los usuarios que acumulan más puntos de lealtad son más propensos a realizar transacciones de mayor monto.
+2. Los meses con mayores tasas de conversión en general se correlacionan con un aumento en el uso de dispositivos móviles, indicando que la optimización para estos dispositivos es fundamental para maximizar las transacciones.
+3. Las categorías de productos con mayor cashback tienen un ticket promedio más alto.
+4. Los meses en los que se reportan mayores ganancias generales son seguidos por una disminución temporal en el margen de ganancia de ciertas categorías, sugiriendo que un aumento en las transacciones podría estar afectando los márgenes debido a costos asociados.
 
 ----
 
@@ -175,12 +175,7 @@ Durante el diseño de todos los dashboards, se consideraron aspectos de UX/UI y 
 ![Dashboard Ganancias](/images/dashboard_5.jpg)
 
 ## <br>🔍 Prueba de Hipótesis
-1. **Los usuarios que reciben más cashback tienden a realizar más transacciones.**
-
-
----
-
-2. **Los usuarios que acumulan más puntos de lealtad son más propensos a realizar transacciones de mayor monto.**
+1. **Los usuarios que acumulan más puntos de lealtad son más propensos a realizar transacciones de mayor monto.**
 
 Se ha realizado un análisis del dashboard de Puntos de Lealtad, enfocándose en los gráficos que muestran el Ranking de transacciones por monto y el Ranking de transacciones por puntos de Lealtad.
 
@@ -192,7 +187,7 @@ Mientras que los usuarios que realizan transacciones de mayor monto tienden a te
   
 
 ---
-3. **Los meses con mayores tasas de conversión en general se correlacionan con un aumento en el uso de dispositivos móviles, indicando que la optimización para estos dispositivos es fundamental para maximizar las transacciones.**
+2. **Los meses con mayores tasas de conversión en general se correlacionan con un aumento en el uso de dispositivos móviles, indicando que la optimización para estos dispositivos es fundamental para maximizar las transacciones.**
 
 Se ha analizado el dashboard de Tasa de Conversión, filtrando los datos de los tres meses con las mayores tasas de conversión hasta la fecha: Agosto 2023, Octubre 2023 y Julio 2024 (resaltado en amarillo).
 
@@ -212,7 +207,7 @@ Finalmente, en Julio de 2024, las transferencias bancarias (Bank Transfer) y las
 Aunque las transacciones web dominaron en los meses anteriores, el notable incremento en la conversión de dispositivos móviles en julio de 2024 sugiere que optimizar la experiencia de usuario para estos dispositivos mejoró la tasa de conversión. Los datos analizados respaldan la hipótesis de que los meses con mayores tasas de conversión se correlacionan con un aumento en el uso de dispositivos móviles. **_La hipótesis se considera verdadera_**.
 
 ---
-4. **Las categorías de productos con mayor cashback tienen un ticket promedio más alto**
+3. **Las categorías de productos con mayor cashback tienen un ticket promedio más alto**
 
 Al analizar el dashboard de Cashback, hemos comparado el Cashback otorgado con el Ticket Promedio en diversas categorías de servicio.
 
@@ -221,3 +216,21 @@ Al analizar el dashboard de Cashback, hemos comparado el Cashback otorgado con e
 Los datos revelan que las categorías de "Streaming Service" y "Education Fee" (resaltadas en rojo) presentan los mayores montos de Cashback, mientras que su Ticket Promedio es relativamente más bajo en comparación con otras categorías. En contraste, las categorías de "Internet Bill" y "Gas Bill" (resaltadas en verde) muestran un Ticket Promedio significativamente más alto, pero el Cashback por transacción es relativamente bajo.
 
 Las categorías con mayor Cashback no necesariamente corresponden a montos transaccionados altos, lo que sugiere que los factores que influyen en el Cashback pueden ser independientes del Ticket Promedio. Por lo tanto, no podemos establecer una relación directa entre un alto Cashback y un Ticket Promedio elevado. **_La hipótesis se considera falsa_**.
+
+---
+4. **Los meses en los que se reportan altos márgenes de ganancia en categorías específicas son seguidos por un incremento en las ganancias generales, sugiriendo que la rentabilidad de estas categorías impulsa el crecimiento del negocio.**
+
+Se ha analizado el dashboard de Ganancias, enfocándose en las categorías de productos con los mayores márgenes de ganancia: Education Fee (0,56%), Grocery Shopping (0,55%), Gift Card (0,55%), Bus Ticket (0,55%) y Streaming Service (0,54%). Además, se examinaron los meses con las mayores ganancias: Octubre de 2023, Diciembre de 2023, Marzo de 2024 y Mayo de 2024.
+
+Se debe analizar en cuáles de las categorías se presentan los mismos picos que en los meses de mayor ganancia. A continuación, se dan a conocer los resultados de esta comparativa:
+
+- **Streaming Service:** Los picos de ganancia solo coinciden con diciembre de 2023.
+- **Bus Ticket:** No se observa coincidencia entre los picos de ganancia y los meses de mayor ganancia.
+- **Gift Card:** Los picos de ganancia coinciden con octubre de 2023, diciembre de 2023 y mayo de 2024.
+- **Grocery Shopping:** Se observa coincidencia en octubre de 2023, diciembre de 2023 y mayo de 2024.
+- **Education Fee:** Los picos de ganancia coinciden con octubre de 2023, diciembre de 2023 y marzo de 2024.
+
+Los datos analizados apoyan la hipótesis de que los meses con altos márgenes de ganancia en categorías específicas están correlacionados con incrementos en las ganancias generales. Las categorías de Gift Card, Grocery Shopping y Education Fee no solo muestran márgenes significativos, sino que también presentan picos de ganancia en varios de los meses más lucrativos. Por otro lado, la categoría de Bus Ticket no refleja esta relación.
+
+Estos hallazgos sugieren que la rentabilidad de ciertas categorías impulsa el crecimiento del negocio. **_La hipótesis se considera verdadera_**.
+
