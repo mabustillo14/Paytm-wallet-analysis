@@ -4,6 +4,12 @@ Este proyecto tiene como objetivo analizar las transacciones realizadas en una b
 ### Caso de Estudio
 Se utiliza un conjunto de datos obtenida de [Kaggle](https://www.kaggle.com/datasets/harunrai/digital-wallet-transactions) que simula las transacciones de una plataforma de billetera digital similar a servicios populares como PayTm en India o Khalti en Nepal.
 
+### Herramientas
+- **[BigQuery](https://cloud.google.com/bigquery/docs/introduction?hl=es-419):** Para almacenar los datos y ejecutar consultas SQL para extraer los datos necesarios y realizar el análisis exploratorio.
+- **[Power Query](https://learn.microsoft.com/es-es/power-query/power-query-what-is-power-query):** Fue utilizado para la limpieza y transformación de los datos antes de su análisis en Power BI.
+- **[Power BI](https://www.microsoft.com/es-es/power-platform/products/power-bi?msockid=03ad65a8640c67e7386870ab65d8668e):** Fue para la creación de los dashboards interactivos que visualizan los resultados del análisis.
+- **[Figma](https://www.figma.com/es-la/):** Para el diseño de elementos visuales para los dashboard y la documentación.
+
 
 ## <br>💡 Enfoque Metodológico 
 Se diseñaron dashboards interactivos en Power BI para visualizar KPIs y validar hipótesis relacionadas con cashback, lealtad, dispositivos y categorías de productos.
@@ -79,7 +85,7 @@ En el contexto de este proyecto, el Data Mart se diseñó específicamente para 
 
 Previamente se deben limpiar los datos para evitar errores durante el análisis. Para el caso, los datos utilizados esta pre-procesados y limpios, de tal manera que no hay NULLs ni transacciones repetidas.
 
-Luego para el modelado y normalización de datos, se crea un **Data Mart con 6 tablas de dimensiones**. Lo que permite agrupar los datos por categorías como transacciones (`fact_transactions`), métodos de pago (`dim_payment_method`), locaciones (`dim_location`), dispositivos (`dim_device`), categorías de productos (`dim_produts`) y fechas (`dim_calendar`).
+Luego para el modelado y normalización de datos, se crea un **Data Mart con 5 tablas de dimensiones y 1 tabla de hechos**. Lo que permite agrupar los datos por categorías como transacciones (`fact_transactions`), métodos de pago (`dim_payment_method`), locaciones (`dim_location`), dispositivos (`dim_device`), categorías de productos (`dim_produts`) y fechas (`dim_calendar`).
 
 ![Arquitectura data mart](/images/data_mart.JPG)
 
