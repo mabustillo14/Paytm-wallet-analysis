@@ -19,8 +19,8 @@ Se diseñaron dashboards interactivos en Power BI para visualizar KPIs y validar
 ### Hipótesis de Negocio
 1. Los usuarios que reciben más cashback tienden a realizar más transacciones.
 2. Los usuarios que acumulan más puntos de lealtad son más propensos a realizar transacciones de mayor monto.
-3. Los usuarios que usan dispositivos móviles tienen una tasa de conversión más baja que aquellos que usan computadoras
-4. Las categorías de productos con mayor cashback tienen un monto promedio por transacción más alto
+3. Los meses con mayores tasas de conversión en general se correlacionan con un aumento en el uso de dispositivos móviles, indicando que la optimización para estos dispositivos es fundamental para maximizar las transacciones.
+4. Las categorías de productos con mayor cashback tienen un ticket promedio más alto
 
 ----
 
@@ -192,10 +192,27 @@ Mientras que los usuarios que realizan transacciones de mayor monto tienden a te
   
 
 ---
-3. **Los usuarios que usan dispositivos móviles tienen una tasa de conversión más baja que aquellos que usan computadoras**
+3. **Los meses con mayores tasas de conversión en general se correlacionan con un aumento en el uso de dispositivos móviles, indicando que la optimización para estos dispositivos es fundamental para maximizar las transacciones.**
+
+Se ha analizado el dashboard de Tasa de Conversión, filtrando los datos de los tres meses con las mayores tasas de conversión hasta la fecha: Agosto 2023, Octubre 2023 y Julio 2024 (resaltado en amarillo).
+
+![Visualización del Tasad de Conversión](/images/visualization_hn3_1.png)
+
+En Agosto de 2023, se observa que los medios de pago con mayor tasa de conversión fueron las tarjetas de crédito (Credit Card) y las transferencias bancarias (Bank Transfer), además de que las transacciones web lograron la mayor conversión.
+
+![Visualización del Tasad de Conversión](/images/visualization_hn3_2.png)
+Durante Octubre de 2023, las tarjetas de débito (Debit Card) y las tarjetas de crédito (Credit Card) destacaron como los medios de pago con mayor tasa de conversión, manteniéndose las transacciones web como las más efectivas.
+
+![Visualización del Tasad de Conversión](/images/visualization_hn3_3.png)
+
+Finalmente, en Julio de 2024, las transferencias bancarias (Bank Transfer) y las tarjetas de débito (Debit Card) fueron los medios de pago más exitosos, y se destaca que la mayor conversión se registró a través de dispositivos iOS y Android.
+
+![Visualización del Tasad de Conversión](/images/visualization_hn3_4.png)
+
+Aunque las transacciones web dominaron en los meses anteriores, el notable incremento en la conversión de dispositivos móviles en julio de 2024 sugiere que optimizar la experiencia de usuario para estos dispositivos mejoró la tasa de conversión. Los datos analizados respaldan la hipótesis de que los meses con mayores tasas de conversión se correlacionan con un aumento en el uso de dispositivos móviles. **_La hipótesis se considera verdadera_**.
 
 ---
-4. **Las categorías de productos con mayor cashback tienen un monto promedio por transacción más alto**
+4. **Las categorías de productos con mayor cashback tienen un ticket promedio más alto**
 
 Al analizar el dashboard de Cashback, hemos comparado el Cashback otorgado con el Ticket Promedio en diversas categorías de servicio.
 
