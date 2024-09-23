@@ -179,7 +179,7 @@ Durante el diseño de todos los dashboards, se consideraron aspectos de UX/UI y 
 
 Se ha realizado un análisis del dashboard de Puntos de Lealtad, enfocándose en los gráficos que muestran el Ranking de transacciones por monto y el Ranking de transacciones por puntos de Lealtad.
 
-![Visualización del Dashboard Puntos de Lealtad](/images/visualization_hn2_1.png)
+![Visualización del Dashboard Puntos de Lealtad](/images/visualization_hn1_1.png)
 
 Se observa que en las transacciones de mayor monto, la cantidad de puntos de lealtad acumulados por cada usuario oscila entre 38 y 995 puntos (flecha verde). Por otro lado, al examinar las transacciones de los usuarios con la mayor cantidad de puntos de lealtad (los primeros con 995 puntos), se encuentra que los montos transaccionados varían entre $333 y $9.816 (flecha amarilla).
 
@@ -191,18 +191,18 @@ Mientras que los usuarios que realizan transacciones de mayor monto tienden a te
 
 Se ha analizado el dashboard de Tasa de Conversión, filtrando los datos de los tres meses con las mayores tasas de conversión hasta la fecha: Agosto 2023, Octubre 2023 y Julio 2024 (resaltado en amarillo).
 
-![Visualización del Tasad de Conversión](/images/visualization_hn3_1.png)
+![Visualización del Tasad de Conversión](/images/visualization_hn2_1.png)
 
 En Agosto de 2023, se observa que los medios de pago con mayor tasa de conversión fueron las tarjetas de crédito (Credit Card) y las transferencias bancarias (Bank Transfer), además de que las transacciones web lograron la mayor conversión.
 
-![Visualización del Tasad de Conversión](/images/visualization_hn3_2.png)
+![Visualización del Tasad de Conversión](/images/visualization_hn2_2.png)
 Durante Octubre de 2023, las tarjetas de débito (Debit Card) y las tarjetas de crédito (Credit Card) destacaron como los medios de pago con mayor tasa de conversión, manteniéndose las transacciones web como las más efectivas.
 
-![Visualización del Tasad de Conversión](/images/visualization_hn3_3.png)
+![Visualización del Tasad de Conversión](/images/visualization_hn2_3.png)
 
 Finalmente, en Julio de 2024, las transferencias bancarias (Bank Transfer) y las tarjetas de débito (Debit Card) fueron los medios de pago más exitosos, y se destaca que la mayor conversión se registró a través de dispositivos iOS y Android.
 
-![Visualización del Tasad de Conversión](/images/visualization_hn3_4.png)
+![Visualización del Tasad de Conversión](/images/visualization_hn2_4.png)
 
 Aunque las transacciones web dominaron en los meses anteriores, el notable incremento en la conversión de dispositivos móviles en julio de 2024 sugiere que optimizar la experiencia de usuario para estos dispositivos mejoró la tasa de conversión. Los datos analizados respaldan la hipótesis de que los meses con mayores tasas de conversión se correlacionan con un aumento en el uso de dispositivos móviles. **_La hipótesis se considera verdadera_**.
 
@@ -211,7 +211,7 @@ Aunque las transacciones web dominaron en los meses anteriores, el notable incre
 
 Al analizar el dashboard de Cashback, hemos comparado el Cashback otorgado con el Ticket Promedio en diversas categorías de servicio.
 
-![Visualización del Dashboard Cashback](/images/visualization_hn4_1.png)
+![Visualización del Dashboard Cashback](/images/visualization_hn3_1.png)
 
 Los datos revelan que las categorías de "Streaming Service" y "Education Fee" (resaltadas en rojo) presentan los mayores montos de Cashback, mientras que su Ticket Promedio es relativamente más bajo en comparación con otras categorías. En contraste, las categorías de "Internet Bill" y "Gas Bill" (resaltadas en verde) muestran un Ticket Promedio significativamente más alto, pero el Cashback por transacción es relativamente bajo.
 
@@ -221,6 +221,8 @@ Las categorías con mayor Cashback no necesariamente corresponden a montos trans
 4. **Los meses en los que se reportan altos márgenes de ganancia en categorías específicas son seguidos por un incremento en las ganancias generales, sugiriendo que la rentabilidad de estas categorías impulsa el crecimiento del negocio.**
 
 Se ha analizado el dashboard de Ganancias, enfocándose en las categorías de productos con los mayores márgenes de ganancia: Education Fee (0,56%), Grocery Shopping (0,55%), Gift Card (0,55%), Bus Ticket (0,55%) y Streaming Service (0,54%). Además, se examinaron los meses con las mayores ganancias: Octubre de 2023, Diciembre de 2023, Marzo de 2024 y Mayo de 2024.
+
+![Visualización del Ganancias](/images/visualization_hn4_1.png)
 
 Se debe analizar en cuáles de las categorías se presentan los mismos picos que en los meses de mayor ganancia. A continuación, se dan a conocer los resultados de esta comparativa:
 
