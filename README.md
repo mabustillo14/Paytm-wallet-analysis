@@ -160,7 +160,7 @@ transaction_abandonment_rate = DIVIDE(
 ## <br>💡 Análisis de Datos
 El análisis de datos se llevó a cabo mediante un enfoque descriptivo y comparativo. Se desarrolló un reporte con 1 portada y 5 dashboards. En cada página se muestran aspectos representativos de las transacciones y visualizaciones puntuales para responder a cada una de las hipótesis de negocios y obtener insights relevantes.
 
-Durante el diseño de todos los dashboards, se consideraron aspectos de UX y Data Storytelling para que la interpretación de las visualizaciones sea lo más amigable posible.
+Durante el diseño de todos los dashboards, se consideraron aspectos de UX/UI y Data Storytelling para que la interpretación de las visualizaciones sea lo más amigable posible.
 
 ![Dashboard HOME](/images/dashboard_0.jpg)
 
@@ -174,4 +174,33 @@ Durante el diseño de todos los dashboards, se consideraron aspectos de UX y Dat
 
 ![Dashboard Ganancias](/images/dashboard_5.jpg)
 
+## <br>🔍 Prueba de Hipótesis
+1. **Los usuarios que reciben más cashback tienden a realizar más transacciones.**
 
+
+---
+
+2. **Los usuarios que acumulan más puntos de lealtad son más propensos a realizar transacciones de mayor monto.**
+
+Se ha realizado un análisis del dashboard de Puntos de Lealtad, enfocándose en los gráficos que muestran el Ranking de transacciones por monto y el Ranking de transacciones por puntos de Lealtad.
+
+![Visualización del Dashboard Puntos de Lealtad](/images/visualization_hn2_1.png)
+
+Se observa que en las transacciones de mayor monto, la cantidad de puntos de lealtad acumulados por cada usuario oscila entre 38 y 995 puntos (flecha verde). Por otro lado, al examinar las transacciones de los usuarios con la mayor cantidad de puntos de lealtad (los primeros con 995 puntos), se encuentra que los montos transaccionados varían entre $333 y $9.816 (flecha amarilla).
+
+Mientras que los usuarios que realizan transacciones de mayor monto tienden a tener un promedio moderado de puntos de lealtad, aquellos con más puntos no necesariamente realizan transacciones de alto valor. En base a los resultados, se sugiere que no existe una correlación directa en su totalidad entre el monto de las transacciones y la cantidad de puntos de lealtad acumulados por los usuarios. Si bien se cumple para algunas transacciones, no es un caso que se repite entre todos los casos. **_La hipótesis se considera falsa_**.
+  
+
+---
+3. **Los usuarios que usan dispositivos móviles tienen una tasa de conversión más baja que aquellos que usan computadoras**
+
+---
+4. **Las categorías de productos con mayor cashback tienen un monto promedio por transacción más alto**
+
+Al analizar el dashboard de Cashback, hemos comparado el Cashback otorgado con el Ticket Promedio en diversas categorías de servicio.
+
+![Visualización del Dashboard Cashback](/images/visualization_hn4_1.png)
+
+Los datos revelan que las categorías de "Streaming Service" y "Education Fee" (resaltadas en rojo) presentan los mayores montos de Cashback, mientras que su Ticket Promedio es relativamente más bajo en comparación con otras categorías. En contraste, las categorías de "Internet Bill" y "Gas Bill" (resaltadas en verde) muestran un Ticket Promedio significativamente más alto, pero el Cashback por transacción es relativamente bajo.
+
+Las categorías con mayor Cashback no necesariamente corresponden a montos transaccionados altos, lo que sugiere que los factores que influyen en el Cashback pueden ser independientes del Ticket Promedio. Por lo tanto, no podemos establecer una relación directa entre un alto Cashback y un Ticket Promedio elevado. **_La hipótesis se considera falsa_**.
