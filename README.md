@@ -26,7 +26,7 @@ Se diseñaron dashboards interactivos en Power BI para visualizar KPIs y validar
 1. Los usuarios que acumulan más puntos de lealtad son más propensos a realizar transacciones de mayor monto.
 2. Los meses con mayores tasas de conversión en general se correlacionan con un aumento en el uso de dispositivos móviles, indicando que la optimización para estos dispositivos es fundamental para maximizar las transacciones.
 3. Las categorías de productos con mayor cashback tienen un ticket promedio más alto.
-4. Los meses en los que se reportan mayores ganancias generales son seguidos por una disminución temporal en el margen de ganancia de ciertas categorías, sugiriendo que un aumento en las transacciones podría estar afectando los márgenes debido a costos asociados.
+4. Los meses en los que se reportan altos márgenes de ganancia en categorías específicas son seguidos por un incremento en las ganancias generales, sugiriendo que la rentabilidad de estas categorías impulsa el crecimiento del negocio.
 
 ----
 
