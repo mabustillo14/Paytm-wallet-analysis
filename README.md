@@ -168,6 +168,9 @@ El análisis de datos se llevó a cabo mediante un enfoque descriptivo y compara
 
 Durante el diseño de todos los dashboards, se consideraron aspectos de UX/UI y Data Storytelling para que la interpretación de las visualizaciones sea lo más amigable posible.
 
+
+> 👉Se puede visualizar el tablero completo desde el siguiente [enlace](https://mabustillo14.github.io/Paytm-wallet-analysis/site/index.html) 
+
 ![Dashboard HOME](/images/dashboard_0.jpg)
 
 ![Dashboard General](/images/dashboard_1.jpg)
