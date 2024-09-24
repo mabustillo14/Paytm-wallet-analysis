@@ -242,3 +242,5 @@ Los datos analizados apoyan la hipótesis de que los meses con altos márgenes d
 
 Estos hallazgos sugieren que la rentabilidad de ciertas categorías impulsa el crecimiento del negocio. **_La hipótesis se considera verdadera_**.
 
+## <br>📧 Contacto
+Cualquier duda del proyecto, conectemos por [LinkedIn](https://www.linkedin.com/in/mario-bustillo/)
