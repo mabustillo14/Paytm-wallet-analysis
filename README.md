@@ -85,7 +85,7 @@ En el contexto de este proyecto, el Data Mart se diseñó específicamente para 
 
 Previamente se deben limpiar los datos para evitar errores durante el análisis. Para el caso, los datos utilizados esta pre-procesados y limpios, de tal manera que no hay NULLs ni transacciones repetidas.
 
-Luego para el modelado y normalización de datos, se crea un **Data Mart con 5 tablas de dimensiones y 1 tabla de hechos**. Lo que permite agrupar los datos por categorías como transacciones (`fact_transactions`), métodos de pago (`dim_payment_method`), locaciones (`dim_location`), dispositivos (`dim_device`), categorías de productos (`dim_produts`) y fechas (`dim_calendar`).
+Luego para el modelado y normalización de datos, se crea un **Data Mart con un modelo tipo estrella con 5 tablas de dimensiones y 1 tabla de hechos**. Lo que permite agrupar los datos por categorías como transacciones (`fact_transactions`), métodos de pago (`dim_payment_method`), locaciones (`dim_location`), dispositivos (`dim_device`), categorías de productos (`dim_produts`) y fechas (`dim_calendar`).
 
 ![Arquitectura data mart](/images/data_mart.JPG)
 
